@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "PII Redactor",
+  "version": "1.0",
+  "description": "Securely redact PII from PDF documents",
+  "permissions": [
+    "http://localhost:7678/*",
+    "activeTab",
+    "storage"
+  ],
+  "browser_action": {
+    "default_popup": "frontend/popup.html"
+  }
+}

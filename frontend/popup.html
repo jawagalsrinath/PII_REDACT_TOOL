@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PII Redactor</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+        }
+        .filter-group {
+            margin-bottom: 15px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #0366d6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:disabled {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h2>PII Redactor</h2>
+    <form id="redactionForm">
+        <div class="filter-group">
+            <h3>Select PII to Redact:</h3>
+            <label>
+                <input type="checkbox" name="filters" value="name" checked>
+                Names
+            </label><br>
+            <label>
+                <input type="checkbox" name="filters" value="phone" checked>
+                Phone Numbers
+            </label><br>
+            <label>
+                <input type="checkbox" name="filters" value="email" checked>
+                Email Addresses
+            </label><br>
+            <label>
+                <input type="checkbox" name="filters" value="address">
+                Physical Addresses
+            </label><br>
+            <label>
+                <input type="checkbox" name="filters" value="ssn" checked>
+                SSN/Government IDs
+            </label>
+        </div>
+        
+        <input type="file" id="pdfFile" accept=".pdf" required>
+        <button type="submit" class="submit-btn" id="redactBtn" disabled>
+            Redact Document
+        </button>
+    </form>
+
+    <script src="popup.js"></script>
+</body>
+</html>
